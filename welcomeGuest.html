@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var name = [
+        "Kanika",
+        "Kajal",
+        "Ravi",
+        "Ramseh",
+        "Mehak",
+        "Janesh",
+        "Kusum",
+        "Sanjeev",
+        "Sudesh",
+        "Mohan",
+      ];
+      var checkEnterance = prompt("What is your name?");
+      var checkName = name.includes(checkEnterance);
+      if (checkName == true) {
+        alert("Welcome" + " " + checkEnterance + " " + "to our party");
+      } else {
+        alert("You are not invited");
+      }
+    </script>
+    <!-- While loop task -->
+    <script>
+      var i = 1;
+      while (i <= 30) {
+        //To print Fizz instead of number multiply by 3
+        if (i % 3 == 0 && i % 5 == 0) {
+          //This condition will be write on top because it will checked at first
+          i++;
+          document.write("Fizz Buzz");
+          document.write("<br>");
+        } else if (i % 3 == 0) {
+          i++;
+          document.write("Fizz");
+          document.write("<br>");
+        } else if (i % 5 == 0) {
+          i++;
+          document.write("Buzz");
+          document.write("<br>");
+        } else {
+          document.write(i);
+          i++;
+          document.write("<br>");
+        }
+      }
+    </script>
+    <br />
+    <!-- Or we van do above method with storing value in array -->
+    <script>
+      var fizBuzz = [];
+      var i = 1;
+      function fizBuz() {
+        while (i <= 20) {
+          if (i % 3 == 0 && i % 5 == 0) {
+            fizBuzz.push("Fizz Buzz");
+          } else if (i % 3 == 0) {
+            fizBuzz.push("Fizz ");
+          } else if (i % 5 == 0) {
+            fizBuzz.push("Buzz");
+          } else {
+            fizBuzz.push(i);
+          }
+          i++;
+        }
+        document.write(fizBuzz);
+      }
+      fizBuz();
+    </script>
+  </body>
+</html>
